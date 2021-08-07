@@ -321,7 +321,7 @@ tw-passage {
 [[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="32" name="Покопаться в моркови" tags="" position="6000,3797" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Из под следующей морковки выглянули пушистые серые ушки.
-[[Забрать зайчонка]]</tw-passagedata><tw-passagedata pid="33" name="Бежать из дома" tags="" position="6241,5633" size="100,100">Вы ели успеваете унести лапы, домик полностью объят огнем. (display: &quot;Уйти из дома&quot;)</tw-passagedata><tw-passagedata pid="34" name="Остаться" tags="" position="7785,5199.666666666667" size="100,100">Балка с крыши падает вниз погребая вас вместе с собой
+[[Забрать зайчонка]]</tw-passagedata><tw-passagedata pid="33" name="Бежать из дома" tags="" position="6009.333333333333,5836.333333333333" size="100,100">Вы ели успеваете унести лапы, домик полностью объят огнем. (display: &quot;Уйти из дома&quot;)</tw-passagedata><tw-passagedata pid="34" name="Остаться" tags="" position="7785,5199.666666666667" size="100,100">Балка с крыши падает вниз погребая вас вместе с собой
 [[Принять смерть-&gt;Вы не справились]]</tw-passagedata><tw-passagedata pid="35" name="Заглянуть ему в пасть" tags="" position="6639,3871" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Пахнет клеем. Внутри что-то сверкает.
@@ -342,12 +342,16 @@ tw-passage {
 	(set: $timeLeft to it - 1)
 }{(if: (history:) contains &quot;Потрепать его за ушко&quot;)[
 	Вы нащупываете что-то холодное. На корпусе выгравированно &quot;Zippo&quot;. Ваш заячий мозг подсказывает вам, что это один самых известных производителей зажигалок.&lt;br&gt;
-	[[Взять зажигалку-&gt;Шкура медведя]]
-	(set: $bag to it + (a:&quot;lighter&quot;))
+	|getLighter&gt;[
+		(link-rerun: &quot;Взять зажигалку&quot;)[
+			(set: $bag to it + (a:&quot;lighter&quot;))
+			(replace: ?getLighter)[~~Взять зажигалку~~]
+		]
+	]
 ](else:)[
-	Пасть резко захлопывается. Вы кое-как успеваете одернуть руку, какой псих устанавливает ловушки в декорациях...&lt;br&gt;
-	[[Осмотреть медведя-&gt;Шкура медведя]]
+	Пасть резко захлопывается. Вы кое-как успеваете одернуть руку, какой псих устанавливает ловушки в декорациях...
 ]}
+[[Осмотреть медведя-&gt;Шкура медведя]]
 [[Оглядеться вокруг]] </tw-passagedata><tw-passagedata pid="39" name="Отряхнуться" tags="" position="6818,4141" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Вы отряхиваетесь, лучше чем прежде, но былого уже не вернуть.
@@ -631,6 +635,7 @@ tw-passage {
 	(if: (history:) contains &quot;Выстрелить из ружья&quot;)[
 		Заяц - стрелок!&lt;br&gt;
 	]
+	(link-rerun: &quot;Начать сначала&quot;)[(restart:)]
 }</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
