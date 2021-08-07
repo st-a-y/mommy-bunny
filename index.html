@@ -43,7 +43,7 @@ tw-passage {
 	(set: $userCode to &quot;&quot;)
 	(set: $safeIsOpen to false)
 	(set: $timeLeft to 40)
-}</tw-passagedata><tw-passagedata pid="2" name="Оглядеться вокруг" tags="" position="7676.333333333333,2605" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="2" name="Оглядеться вокруг" tags="" position="7676,2605" size="100,100">{
 (if: $timeLeft &gt; 0 or (history:) contains &quot;Остановить маятник&quot;)[
 	Вы заходите в деревянный охотничий домик. Внутри горит свет, видимо охотник ушел ненадолго и вам нужно поторапливаться с поисками. Вы окидиваете быстрым взглядом помещение в поисках мест, где могут быть спрятаны зайчата. &lt;br&gt;
 	(if: (history:) contains &quot;Ударить ножку под телевизором лапой&quot;)[
@@ -92,7 +92,8 @@ tw-passage {
 	[[Выключить телевизор]]
 ]}
 [[Протереть пыль с экрана]]
-[[Ударить ножку под телевизором лапой]]</tw-passagedata><tw-passagedata pid="4" name="Корзинка, наполненная морковью" tags="" position="6194.333333333333,3567.6666666666665" size="100,100">Плетенная корзинка, наполненная доверху молодой морковью
+[[Ударить ножку под телевизором лапой]]
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="4" name="Корзинка, наполненная морковью" tags="" position="6194,3567" size="100,100">Плетенная корзинка, наполненная доверху молодой морковью
 {(if: $carrotEaten is &gt;= 2)[
 	(if: (history:) contains &quot;Покопаться в моркови&quot;)[
 		(text-colour:grey)[~~Покопаться в моркови~~]&lt;br&gt;
@@ -110,7 +111,7 @@ tw-passage {
 	[[Поджечь корзину]]&lt;br&gt;
 ]
 [[Оглядеться вокруг]]&lt;br&gt;
-}</tw-passagedata><tw-passagedata pid="5" name="Шкура медведя" tags="" position="6956.333333333333,3877" size="100,100">Старая шкура бурого медведя: освежеванный он выглядит не таким страшным. 
+}</tw-passagedata><tw-passagedata pid="5" name="Шкура медведя" tags="" position="6956,3877" size="100,100">Старая шкура бурого медведя: освежеванный он выглядит не таким страшным. 
 {
 [[Потрепать его за ушко]]&lt;br&gt;
 (if: not ((history:) contains &quot;Засунуть руку в пасть&quot;))[
@@ -118,7 +119,7 @@ tw-passage {
 ]
 [[Пролезть под ним]]&lt;br&gt;
 [[Оглядеться вокруг]]&lt;br&gt;
-}</tw-passagedata><tw-passagedata pid="6" name="Напольные часы" tags="" position="10002,1864.6666666666665" size="100,100">Высоченные тяжелые напольные часы: маятник колеблется, время идет.
+}</tw-passagedata><tw-passagedata pid="6" name="Напольные часы" tags="" position="10002,1864" size="100,100">Высоченные тяжелые напольные часы: маятник колеблется, время идет.
 {
 	(if: (count: (history:), &quot;Посидеть и подумать&quot;) &gt; 1)[
 		[[Остановить маятник]]&lt;br&gt;
@@ -127,7 +128,7 @@ tw-passage {
 		[[Разбить часы кочергой]]&lt;br&gt;
 	]
 	[[Оглядеться вокруг]]&lt;br&gt;
-}</tw-passagedata><tw-passagedata pid="7" name="Кухонная полочка" tags="" position="10382.666666666668,4204.666666666667" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="7" name="Кухонная полочка" tags="" position="10382,4204" size="100,100">{
 	(if: (history:) contains &quot;Выстрелить из ружья&quot;)[
 		Деревянная старая полочка с плетенными дверками, теперь валяется на полу, с простреленной дверцей.&lt;br&gt;
 		[[Заглянуть внутрь]]
@@ -135,7 +136,7 @@ tw-passage {
 		Деревянная старая полочка с плетенными дверками. Она висит слишком высоко, даже зайцу до нее не допрыгнуть.
 	]
 }
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="8" name="Ружье на стене" tags="" position="9724.333333333334,3698.3333333333335" size="100,100">На стене висит охотничье ружье. Вам оно кажется знакомым.
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="8" name="Ружье на стене" tags="" position="9724,3698" size="100,100">На стене висит охотничье ружье. Вам оно кажется знакомым.
 {
 	(if: (history:) contains &quot;Рассмотреть ружье&quot;)[
 		(text-colour:grey)[~~Рассмотреть ружье~~]&lt;br&gt;
@@ -151,7 +152,7 @@ tw-passage {
 		[[Рассмотреть ружье]]&lt;br&gt;
 	]
 	[[Оглядеться вокруг]]&lt;br&gt;
-}</tw-passagedata><tw-passagedata pid="9" name="Картина на стене" tags="" position="8296.333333333334,3915.9999999999995" size="100,100">Картина маслом в широком подрамнике, на ней изображен осенний лес.
+}</tw-passagedata><tw-passagedata pid="9" name="Картина на стене" tags="" position="8296,3915" size="100,100">Картина маслом в широком подрамнике, на ней изображен осенний лес.
 {
 	[[Любоваться видом]]&lt;br&gt;
 	(if: $bag contains &quot;lighter&quot;)[
@@ -161,7 +162,7 @@ tw-passage {
 		[[Кинуть морковку в картину]]&lt;br&gt;
 	]
 	[[Оглядеться вокруг]]&lt;br&gt;
-}</tw-passagedata><tw-passagedata pid="10" name="Камин" tags="" position="7700.666666666664,3951.0000000000005" size="100,100">Камин, собранный из разнообразных камней, явно привезенных сюда из мест, находящихся за пределами леса. {
+}</tw-passagedata><tw-passagedata pid="10" name="Камин" tags="" position="7700,3951" size="100,100">Камин, собранный из разнообразных камней, явно привезенных сюда из мест, находящихся за пределами леса. {
 	(if: (history:) contains &quot;Использовать совок&quot;)[
 		Он больше не представляет какого-либо интереса.
 	] (else:)[
@@ -178,7 +179,7 @@ tw-passage {
 		&lt;br&gt;
 	]
 	[[Оглядеться вокруг]]&lt;br&gt;
-}</tw-passagedata><tw-passagedata pid="11" name="Клетчатый диван" tags="" position="10800.333333333334,4076" size="100,100">Клетчанный мягкий диван с протертой в некоторых местах обшивкой.
+}</tw-passagedata><tw-passagedata pid="11" name="Клетчатый диван" tags="" position="10800,4076" size="100,100">Клетчанный мягкий диван с протертой в некоторых местах обшивкой.
 {
 	[[Посидеть и подумать]]&lt;br&gt;
 	(if: $bag contains &quot;scissors&quot;)[
@@ -204,15 +205,15 @@ tw-passage {
 	Ваши пушистые лапки будто созданы, чтобы этим заниматься - экран сияет&lt;br&gt;
 	[[Продолжить осматривать телевизор-&gt;Телевизор с кинескопом]]&lt;br&gt;
 	[[Оглядеться вокруг]]&lt;br&gt;
-}</tw-passagedata><tw-passagedata pid="14" name="Ударить ножку под телевизором лапой" tags="" position="6182.666666666667,1691.3333333333335" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="14" name="Ударить ножку под телевизором лапой" tags="" position="6182,1691" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Ножка ломается, дерево протяжно скрепит, вы еле успеваете убежать от падающего телевизора. Из под вывалившего стекла вылезает зайчонок
-[[Забрать зайчонка]]</tw-passagedata><tw-passagedata pid="15" name="Сгрызть морковь" tags="" position="5808,3534.6666666666665" size="100,100">{
+[[Забрать зайчонка]]</tw-passagedata><tw-passagedata pid="15" name="Сгрызть морковь" tags="" position="5808,3534" size="100,100">{
 	(set: $carrotEaten to ($carrotEaten + 1))
 	(set: $timeLeft to it - 2)
 }Морковка вкусно хрустит, кажется это не было вашей основной целью, но естественные потребности игнорировать не стоит.
 [[Осмотреть корзинку-&gt;Корзинка, наполненная морковью]] 
-[[Оглядеться вокруг]] </tw-passagedata><tw-passagedata pid="16" name="Взять морковку с собой" tags="" position="5885,3671.6666666666665" size="100,100">{
+[[Оглядеться вокруг]] </tw-passagedata><tw-passagedata pid="16" name="Взять морковку с собой" tags="" position="5885,3671" size="100,100">{
 	(set: $carrotEaten to ($carrotEaten + 1))
 	(set: $timeLeft to it - 1)
 	(if: not ($bag contains &quot;carrot&quot;))[
@@ -220,22 +221,22 @@ tw-passage {
 	]
 }Теперь у вас есть пара морковок в запасе, осталось придумать, что с ними делать
 [[Осмотреть корзинку-&gt;Корзинка, наполненная морковью]] 
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="17" name="Поджечь корзину" tags="" position="6195.333333333334,4057" size="100,100">Огонь вскоре перекидывается на шторы, мебель и охватывает весь дом
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="17" name="Поджечь корзину" tags="" position="6195,4057" size="100,100">Огонь вскоре перекидывается на шторы, мебель и охватывает весь дом
 [[Бежать из дома]]
-[[Остаться]]</tw-passagedata><tw-passagedata pid="18" name="Потрепать его за ушко" tags="" position="6578.333333333333,3763" size="100,100">{
+[[Остаться]]</tw-passagedata><tw-passagedata pid="18" name="Потрепать его за ушко" tags="" position="6578,3763" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Каким бы страшным косолапый не был, но он не заслужил участи быть ковриком для человека. Вы чувствуете жалость.
 [[Осмотреть медведя-&gt;Шкура медведя]]
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="19" name="Пролезть под ним" tags="" position="6715.333333333333,3983" size="100,100">{
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="19" name="Пролезть под ним" tags="" position="6715,3983" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Вы пролазите по пыльному полу, не самая умная мысль, ваша шерстка потеряла прежний блеск.
 [[Осмотреть медведя-&gt;Шкура медведя]]
 [[Отряхнуться]]
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="20" name="Любоваться видом" tags="" position="8065.666666666666,4169" size="100,100">{
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="20" name="Любоваться видом" tags="" position="8065,4169" size="100,100">{
 	(set: $timeLeft to it - 1)
 }На картине изображен дуб, напоминающий тот, под которым вы устроили себе нору в прошлом сезоне.
 [[Осмотреть картину-&gt;Картина на стене]] 
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="21" name="Поленница" tags="" position="7366.666666666665,3954.9999999999995" size="100,100">Аккуратно сложенные головешки березовых дров. От них пахнет лесом и домом. Рядом на крючке висят совок и кочерга.
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="21" name="Поленница" tags="" position="7366,3954" size="100,100">Аккуратно сложенные головешки березовых дров. От них пахнет лесом и домом. Рядом на крючке висят совок и кочерга.
 {
 	(if: not ($bag contains &quot;scoop&quot;))[
 		(link-rerun: &quot;Взять совок&quot;)[
@@ -264,16 +265,16 @@ tw-passage {
 	]
 	[[Покопаться в дровах]]&lt;br&gt;
 	[[Оглядеться вокруг]]&lt;br&gt;
-}</tw-passagedata><tw-passagedata pid="22" name="Поджечь дрова" tags="" position="7463.000000000001,4111.999999999999" size="100,100">Дрова легко воспламеняются, пламя перекидывается на дом. 
+}</tw-passagedata><tw-passagedata pid="22" name="Поджечь дрова" tags="" position="7463,4111" size="100,100">Дрова легко воспламеняются, пламя перекидывается на дом. 
 [[Бежать из дома]]
-[[Остаться]]</tw-passagedata><tw-passagedata pid="23" name="Покопаться в дровах" tags="" position="7507.666666666667,3955.3333333333335" size="100,100">{
+[[Остаться]]</tw-passagedata><tw-passagedata pid="23" name="Покопаться в дровах" tags="" position="7507,3955" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Отодвинув несколько поленьев, вы ничего не нашли, будто вы надеялись, что среди дров можно найти что-то кроме дров...
 [[Осмотреть поленницу-&gt;Поленница]] 
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="24" name="Порезать ножницами" tags="" position="10515.000000000002,4779" size="100,100">{
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="24" name="Порезать ножницами" tags="" position="10515,4779" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Эти клетки сведут с ума даже самого пcихически устойчивого зайца, что уж говорить о многодетной метери. Теперь они не будут проблемой. От диванной обшивки не остается целого места. Вдруг вы слышите писк.
-[[Забрать зайчонка]]</tw-passagedata><tw-passagedata pid="25" name="Поджечь диван" tags="" position="11251.333333333336,4652" size="100,100">Диван легко воспламеняются, пламя перекидывается на дом. 
+[[Забрать зайчонка]]</tw-passagedata><tw-passagedata pid="25" name="Поджечь диван" tags="" position="11251,4652" size="100,100">Диван легко воспламеняются, пламя перекидывается на дом. 
 [[Бежать из дома]]
 [[Остаться]]</tw-passagedata><tw-passagedata pid="26" name="Открыть шкаф" tags="" position="10417,2741" size="100,100">{
 	(set: $timeLeft to it - 1)
@@ -289,7 +290,7 @@ tw-passage {
 		[[Поджечь вещи]]&lt;br&gt;
 	]
 	[[Забросить это дело-&gt;Оглядеться вокруг]]&lt;br&gt;
-}</tw-passagedata><tw-passagedata pid="27" name="Покопаться в вещах" tags="" position="10095.333333333334,2774.6666666666665" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="27" name="Покопаться в вещах" tags="" position="10095,2774" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Вы видите старые дырявые сапоги, сито для муки, многочисленные гильзы от патронов. Видимо этот шкаф выполняет роль мусорки... Единственной ценностью кажется небольшая канистра, от которой исходит запах бензина, того самого которым по весне люди сжигают поля.
 {
@@ -307,37 +308,37 @@ tw-passage {
 	(set: $timeLeft to it - 1)
 }Экран потух
 [[Продолжить осматривать телевизор-&gt;Телевизор с кинескопом]]
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="30" name="Забрать зайчонка" tags="" position="5295,5283.666666666666" size="100,100">{
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="30" name="Забрать зайчонка" tags="" position="5295,5283" size="100,100">{
 	(set: $bag to it + (a:&quot;hare&quot;))
 	(set: $timeLeft to it - 1)
 }Вы обнимаете теплый комочек, который крепко прильнул к вашей груди.
 [[Бежать из дома-&gt;Уйти из дома]]
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="31" name="Сгрызть еще парочку" tags="" position="5699,3405.6666666666665" size="100,100">{
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="31" name="Сгрызть еще парочку" tags="" position="5699,3405" size="100,100">{
 	(set: $carrotEaten to ($carrotEaten + 1))
 	(set: $timeLeft to it - 2)
 }К запаху свежей сладкой морковки добавляется новый запах. Вы принюхиваетесь к доболе знакомому запаху
 [[Корзинка, наполненная морковью]]
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="32" name="Покопаться в моркови" tags="" position="6000.666666666667,3797.6666666666665" size="100,100">{
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="32" name="Покопаться в моркови" tags="" position="6000,3797" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Из под следующей морковки выглянули пушистые серые ушки.
-[[Забрать зайчонка]]</tw-passagedata><tw-passagedata pid="33" name="Бежать из дома" tags="" position="6241.333333333333,5633" size="100,100">Вы ели успеваете унести лапы, домик полностью объят огнем. (display: &quot;Уйти из дома&quot;)</tw-passagedata><tw-passagedata pid="34" name="Остаться" tags="" position="7855,5208" size="100,100">Балка с крыши падает вниз погребая вас вместе с собой
-[[Принять смерть]]</tw-passagedata><tw-passagedata pid="35" name="Принять смерть" tags="" position="7072,5467" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="36" name="Заглянуть ему в пасть" tags="" position="6639.333333333333,3871" size="100,100">{
+[[Забрать зайчонка]]</tw-passagedata><tw-passagedata pid="33" name="Бежать из дома" tags="" position="6241,5633" size="100,100">Вы ели успеваете унести лапы, домик полностью объят огнем. (display: &quot;Уйти из дома&quot;)</tw-passagedata><tw-passagedata pid="34" name="Остаться" tags="" position="7785,5199.666666666667" size="100,100">Балка с крыши падает вниз погребая вас вместе с собой
+[[Принять смерть-&gt;Вы не справились]]</tw-passagedata><tw-passagedata pid="35" name="Заглянуть ему в пасть" tags="" position="6639,3871" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Пахнет клеем. Внутри что-то сверкает.
 [[Засунуть руку в пасть]]
 [[Осмотреть медведя-&gt;Шкура медведя]]
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="37" name="Включить телевизор" tags="" position="5924,1259" size="100,100">{
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="36" name="Включить телевизор" tags="" position="5924,1259" size="100,100">{
 	(set: $tv&#39;s isOn to true)
 	(set: $timeLeft to it - 1)
 	По телевизору идет мультфильм, в котором какое-то неизвестное животное нянчит своих детей.&lt;br&gt;
 	[[Продолжить осматривать телевизор-&gt;Телевизор с кинескопом]]&lt;br&gt;
 	[[Оглядеться вокруг]]&lt;br&gt;
-}</tw-passagedata><tw-passagedata pid="38" name="Смотреть телевизор" tags="" position="5952,1402" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="37" name="Смотреть телевизор" tags="" position="5952,1402" size="100,100">{
 	(set: $timeLeft to it - 2)
 	Этому животному тяжело уследить за детьми, но как минимум они с ней и в безопасности&lt;br&gt;
 	[[Продолжить осматривать телевизор-&gt;Телевизор с кинескопом]]&lt;br&gt;
 	[[Оглядеться вокруг]]&lt;br&gt;
-}</tw-passagedata><tw-passagedata pid="39" name="Засунуть руку в пасть" tags="" position="7077.333333333333,4123" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="38" name="Засунуть руку в пасть" tags="" position="7077,4123" size="100,100">{
 	(set: $timeLeft to it - 1)
 }{(if: (history:) contains &quot;Потрепать его за ушко&quot;)[
 	Вы нащупываете что-то холодное. На корпусе выгравированно &quot;Zippo&quot;. Ваш заячий мозг подсказывает вам, что это один самых известных производителей зажигалок.&lt;br&gt;
@@ -347,11 +348,11 @@ tw-passage {
 	Пасть резко захлопывается. Вы кое-как успеваете одернуть руку, какой псих устанавливает ловушки в декорациях...&lt;br&gt;
 	[[Осмотреть медведя-&gt;Шкура медведя]]
 ]}
-[[Оглядеться вокруг]] </tw-passagedata><tw-passagedata pid="40" name="Отряхнуться" tags="" position="6818.333333333333,4141" size="100,100">{
+[[Оглядеться вокруг]] </tw-passagedata><tw-passagedata pid="39" name="Отряхнуться" tags="" position="6818,4141" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Вы отряхиваетесь, лучше чем прежде, но былого уже не вернуть.
 [[Осмотреть медведя-&gt;Шкура медведя]]
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="41" name="Рассмотреть ружье" tags="" position="9799.666666666668,3858.666666666667" size="100,100">{
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="40" name="Рассмотреть ружье" tags="" position="9799,3858" size="100,100">{
 	(set: $timeLeft to it - 1)
 }На лакированной поверхности вставлены элементы с инкрустацией, на которых изображены сцены охоты на... зайцев. Гончие гонят зайца к ожидающему в засаде человеку... Вы стоите в ступоре, неспособные пошевелить даже ухом.
 {
@@ -359,31 +360,31 @@ tw-passage {
 		[[Отвлечься на морковку]]
 	]
 }
-[[Продолжить стоять в ступоре]]</tw-passagedata><tw-passagedata pid="42" name="Отвлечься на морковку" tags="" position="9743,4142" size="100,100">{
+[[Продолжить стоять в ступоре]]</tw-passagedata><tw-passagedata pid="41" name="Отвлечься на морковку" tags="" position="9743,4142" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Хруст молодой морковки отгоняет неприятные мысли. В самом деле это просто дурацкая гравировка.
 {
   (if: $bag contains &quot;amo&quot;)[
 	  [[Зарядить ружье]]&lt;br&gt;
   ]
-}[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="43" name="Продолжить стоять в ступоре" tags="" position="9883,4140.333333333334" size="100,100">{
+}[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="42" name="Продолжить стоять в ступоре" tags="" position="9883,4140" size="100,100">{
 	(set: $timeLeft to it - 3)
 }Вы долго не можете выйти из состояния ступора, понапрасну теряя драгоценное время.
 {
   (if: $bag contains &quot;amo&quot;)[
 	  [[Зарядить ружье]]&lt;br&gt;
   ]
-}[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="44" name="Использовать совок" tags="" position="7850.666666666664,3949.333333333333" size="100,100">{
+}[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="43" name="Использовать совок" tags="" position="7850,3949" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Этот инструмент очевидно был создан для этой цели. Вы успешно разгребаете слои пепла, извлекая обгоревшую бумажку. На бумажке вы видите символы: $pass
 [[Осмотреть камин-&gt;Камин]]
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="45" name="Поджечь картину" tags="" position="8261.333333333334,4160.999999999999" size="100,100">Картина легко воспламеняются, пламя перекидывается на дом. 
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="44" name="Поджечь картину" tags="" position="8261,4160" size="100,100">Картина легко воспламеняются, пламя перекидывается на дом. 
 [[Бежать из дома]]
-[[Остаться]]</tw-passagedata><tw-passagedata pid="46" name="Кинуть морковку в картину" tags="" position="8463,4162.666666666666" size="100,100">{
+[[Остаться]]</tw-passagedata><tw-passagedata pid="45" name="Кинуть морковку в картину" tags="" position="8463,4162" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Морковка попадает прямо в яблочко. Картина падает, подрамник разбивается. Там где раньше была картина, теперь красуется металлический сейф.
 [[Осмотреть сейф-&gt;Сейф]]
-[[Оглядеться вокруг]] </tw-passagedata><tw-passagedata pid="47" name="Сейф" tags="" position="8684.666666666666,3914.3333333333326" size="100,100">{
+[[Оглядеться вокруг]] </tw-passagedata><tw-passagedata pid="46" name="Сейф" tags="" position="8684,3914" size="100,100">{
 	(if: $safeIsOpen)[
 		Все тот же сейф.&lt;br&gt;
 		(display: &quot;safeActions&quot;)
@@ -391,7 +392,7 @@ tw-passage {
 		На вид прочный металлический сейф с кодовым замком. В таких хранят что-то явно ценное. Знать бы комбинацию...&lt;br&gt;
 		(display: &quot;keypad&quot;)
 	]
-}[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="48" name="Ввести код" tags="" position="8668,4150.999999999999" size="100,100">{
+}[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="47" name="Ввести код" tags="" position="8668,4150" size="100,100">{
   (set: $timeLeft to it - 1)
   (if: $pass is (num: $userCode))[
   	(set: $safeIsOpen to true)
@@ -400,7 +401,7 @@ tw-passage {
   ] (else:)[
 	  Код не подходит. У вас нет времени перебирать все варианты, стоит вернуться к поискам...
   ]
-}[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="49" name="keypad" tags="" position="8598.333333333332,4399.333333333332" size="100,100">{&lt;table&gt;
+}[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="48" name="keypad" tags="" position="8598,4399" size="100,100">{&lt;table&gt;
 	&lt;tr&gt;
 		&lt;td colspan=&quot;3&quot; align=&quot;center&quot;&gt;[....]&lt;userCode|&lt;/td&gt;
 	&lt;/tr&gt;
@@ -487,7 +488,7 @@ tw-passage {
 		]&lt;/td&gt;
 		&lt;td width=&quot;20%&quot; align=&quot;center&quot;&gt;(link-repeat: &quot;Enter&quot;)[(go-to: &quot;Ввести код&quot;)]&lt;/td&gt;
 	 &lt;/tr&gt;
-&lt;/table&gt;&lt;br&gt;}</tw-passagedata><tw-passagedata pid="50" name="safeActions" tags="" position="8721.666666666666,4400.833333333334" size="100,100">{
+&lt;/table&gt;&lt;br&gt;}</tw-passagedata><tw-passagedata pid="49" name="safeActions" tags="" position="8721,4400" size="100,100">{
 	|amo&gt;[(if: $bag contains &quot;amo&quot;)[
 		(text-colour:grey)[~~Взять патрон~~]&lt;br&gt;
 	] (else:)[
@@ -505,25 +506,25 @@ tw-passage {
 			[[Поджечь бумажки]]&lt;br&gt;
 		]
 	]
-}</tw-passagedata><tw-passagedata pid="51" name="Поджечь бумажки" tags="" position="8996.666666666668,4260.833333333334" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="50" name="Поджечь бумажки" tags="" position="8996,4260" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Пламя весело разгорается, превращая бумагу в пепел. На душе у вас стало теплее.
 [[Осмотреть сейф-&gt;Сейф]]
-[[Оглядеться вокруг]] </tw-passagedata><tw-passagedata pid="52" name="Выстрелить из ружья" tags="" position="9326,3898.3333333333335" size="100,100">{
+[[Оглядеться вокруг]] </tw-passagedata><tw-passagedata pid="51" name="Выстрелить из ружья" tags="" position="9326,3898" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Сняв ружье с предохранителя, вы стреляете в сторону, попадая в кухонную полку, она с грохотом падает вниз.
 [[Осмотреть полку-&gt;Кухонная полочка]]
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="53" name="Зарядить ружье" tags="" position="9536,3996.6666666666665" size="100,100">{
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="52" name="Зарядить ружье" tags="" position="9536,3996" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Вы нажимаете на механизм открывания ствола, вставляете патрон, закрываете ствол до щелчка.
 [[Вернуться к осмотру ружья-&gt;Ружье на стене]]
 [[Выстрелить из ружья]]
-[[Оглядеться вокруг]] </tw-passagedata><tw-passagedata pid="54" name="Заглянуть внутрь" tags="" position="9944.333333333334,4781.333333333334" size="100,100">{
+[[Оглядеться вокруг]] </tw-passagedata><tw-passagedata pid="53" name="Заглянуть внутрь" tags="" position="9944,4781" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Внутри вы находите до смерти испуганного зайчонка, теперь его ухо украшает дырочка с краю. Частичка его навсегда останется в доме.
 Рядом с зайчиком вы замечаете ножницы.
 [[Забрать зайчонка и ножницы-&gt;Забрать зайчонка]]
-(set: $bag to it + (a: &quot;scissors&quot;))</tw-passagedata><tw-passagedata pid="55" name="Посидеть и подумать" tags="" position="10915.333333333334,4431" size="100,100">{
+(set: $bag to it + (a: &quot;scissors&quot;))</tw-passagedata><tw-passagedata pid="54" name="Посидеть и подумать" tags="" position="10915,4431" size="100,100">{
 (set: $timeLeft to it - 2)
 (if: (count: (history:), &quot;Посидеть и подумать&quot;) &gt; 1)[
 	Хватит думать, пора действовать&lt;br&gt;
@@ -542,7 +543,7 @@ tw-passage {
 		[[Оглядеться вокруг]]&lt;br&gt;
 	]
 ]
-}</tw-passagedata><tw-passagedata pid="56" name="Внимательней покопаться в диване" tags="" position="10745.333333333334,4432.666666666667" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="55" name="Внимательней покопаться в диване" tags="" position="10745,4432" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Вы находите ключ. Как известно у каждого ключа есть замок, осталось найти что отпирает этот. Какжется с людьми такое часто происходит: они теряют вещи в диванах, креслах, за кроватью...
 {
@@ -555,7 +556,7 @@ tw-passage {
 	]&lt;br&gt;
 	[[Осмотреть диван-&gt;Клетчатый диван]]&lt;br&gt;
 	[[Оглядеться вокруг]]
-}</tw-passagedata><tw-passagedata pid="57" name="Покопаться еще" tags="" position="10380.333333333334,3073" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="56" name="Покопаться еще" tags="" position="10380,3073" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Коробки из-под сигар, поеденные молью вещи. Вы уже почти отчаялись, но тут замечаете блеск металла. Это оказывается замком, висящим на тяжелом кованном сундуке.
 {
@@ -575,7 +576,7 @@ tw-passage {
 		[[Попытаться открыть замок найденным ключом]]&lt;br&gt;
 	]
 	[[Оглядеться вокруг]]
-}</tw-passagedata><tw-passagedata pid="58" name="Выломать замок кочергой" tags="" position="10222,3301.3333333333335" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="57" name="Выломать замок кочергой" tags="" position="10222,3301" size="100,100">{
 	(set: $timeLeft to it - 2)
 	(if: (count: (history:), &quot;Выломать замок кочергой&quot;) is 2)[
 		Пожалуй, вам стоит это прекратить.&lt;br&gt;
@@ -588,30 +589,30 @@ tw-passage {
 		[[Попытаться еще-&gt;Выломать замок кочергой]]&lt;br&gt;
 	]
 	[[Оглядеться вокруг]]
-}</tw-passagedata><tw-passagedata pid="59" name="Попытаться открыть замок найденным ключом" tags="" position="10427,3344.6666666666665" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="58" name="Попытаться открыть замок найденным ключом" tags="" position="10427,3344" size="100,100">{
 	(set: $timeLeft to it - 1)
 }Вы засовываете ключ в замочную скважину, и - о, чудо - он подошел! Сундук открыт.
-[[Заглянуть в сундук]]</tw-passagedata><tw-passagedata pid="60" name="Заглянуть в сундук" tags="" position="10753.666666666668,3221.3333333333335" size="100,100">Из сундука торчит пара длинных ушек, вы принюхиваетесь и не узнаете запах. Это не ваш зайчонок, и это не зайчонок вовсе. Животное отдаленно напоминает зайца.
+[[Заглянуть в сундук]]</tw-passagedata><tw-passagedata pid="59" name="Заглянуть в сундук" tags="" position="10753,3221" size="100,100">Из сундука торчит пара длинных ушек, вы принюхиваетесь и не узнаете запах. Это не ваш зайчонок, и это не зайчонок вовсе. Животное отдаленно напоминает зайца.
 [[Оставить неизвестное животное]]
-[[Забрать неизвестное животное]]</tw-passagedata><tw-passagedata pid="61" name="Оставить неизвестное животное" tags="" position="10735.333333333334,3504.666666666667" size="100,100">(set: $timeLeft to it + 5)
+[[Забрать неизвестное животное]]</tw-passagedata><tw-passagedata pid="60" name="Оставить неизвестное животное" tags="" position="10735,3504" size="100,100">(set: $timeLeft to it + 5)
 Крышка сундука захлопывается.
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="62" name="Забрать неизвестное животное" tags="" position="11062,3653.0000000000005" size="100,100">{
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="61" name="Забрать неизвестное животное" tags="" position="11062,3653" size="100,100">{
 	(set: $timeLeft to it - 5)
 }Вы обнимаете теплый комочек, может быть он и не пахнет зайчонком, но также крепко прижимается к вашей груди.
 [[Бежать из дома-&gt;Уйти из дома]]
 [[Оглядеться вокруг]]
-(set: $bag to it + (a:&quot;rabbit&quot;))</tw-passagedata><tw-passagedata pid="63" name="Остановить маятник" tags="" position="9927,2014.6666666666665" size="100,100">Вы останавливаете маятник, пролетающая мимо муха замирает прямо в воздухе и, что удивительно, не падает.
-[[Коснуться мухи]]</tw-passagedata><tw-passagedata pid="64" name="Разбить часы кочергой" tags="" position="10077,2014.6666666666665" size="100,100">{
+(set: $bag to it + (a:&quot;rabbit&quot;))</tw-passagedata><tw-passagedata pid="62" name="Остановить маятник" tags="" position="9927,2014" size="100,100">Вы останавливаете маятник, пролетающая мимо муха замирает прямо в воздухе и, что удивительно, не падает.
+[[Коснуться мухи]]</tw-passagedata><tw-passagedata pid="63" name="Разбить часы кочергой" tags="" position="10077,2014" size="100,100">{
 	(set: $timeLeft to it - 2)
 }Часы разбиты, но время продолжает течь.
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="65" name="Коснуться мухи" tags="" position="9912,2211.333333333333" size="100,100">Муха отмирает и продолжает лететь как ни в чем не бывало, похоже на то, чего вы касаетесь этот эффект не распространяется.
-[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="66" name="Уйти из дома" tags="" position="5651.666666666667,5837.500000000001" size="100,100">Вы сделали это, как минимум сами оставшись в живых.
-(display: &quot;results&quot;)</tw-passagedata><tw-passagedata pid="67" name="Вы не справились" tags="" position="5813,5830.000000000001" size="100,100">Вы не справились.
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="64" name="Коснуться мухи" tags="" position="9912,2211" size="100,100">Муха отмирает и продолжает лететь как ни в чем не бывало, похоже на то, чего вы касаетесь этот эффект не распространяется.
+[[Оглядеться вокруг]]</tw-passagedata><tw-passagedata pid="65" name="Уйти из дома" tags="" position="5651,5837" size="100,100">Вы сделали это, как минимум сами оставшись в живых.
+(display: &quot;results&quot;)</tw-passagedata><tw-passagedata pid="66" name="Вы не справились" tags="" position="5813,5830" size="100,100">Вы не справились.
 Достижения:
 {
 (set: $bag to (a:))
 (display: &quot;results&quot;)
-}</tw-passagedata><tw-passagedata pid="68" name="results" tags="" position="5730.000000000001,5978.333333333334" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="67" name="results" tags="" position="5730,5978" size="100,100">{
 	(if: $bag contains &quot;hare&quot;)[
 		Спасено зайчат: (count: $bag, &quot;hare&quot;)&lt;br&gt;
 	]
